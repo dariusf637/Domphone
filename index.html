@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur Vidéo IA - Studio Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-container">
+        <!-- En-tête -->
+        <header class="app-header">
+            <div class="bot-info">
+                <div class="avatar-container">
+                    <div class="avatar-pulse"></div>
+                    <span class="avatar-icon">✨</span>
+                </div>
+                <div>
+                    <h1>Studio Pro & Personnalisation</h1>
+                    <p class="status-text">Moteur local actif</p>
+                </div>
+            </div>
+            
+            <!-- Contrôles d'en-tête (Couleur + Poubelle) -->
+            <div class="header-controls">
+                <div class="color-picker-wrapper" title="Couleur de fond du MP4">
+                    <input type="color" id="videoBgColor" value="#1e1b4b">
+                </div>
+                <button id="clearBtn" class="icon-btn" title="Réinitialiser l'historique">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                </button>
+            </div>
+        </header>
+        
+        <!-- Zone des messages de discussion -->
+        <section class="chat-box" id="chatBox"></section>
+        
+        <!-- Barre de saisie de texte -->
+        <footer class="input-container">
+            <div class="input-wrapper">
+                <input type="text" id="userInput" placeholder="Entrez votre texte à transcrire en MP4..." autocomplete="off">
+                <button id="sendBtn" class="send-btn" aria-label="Envoyer">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Studio de rendu en arrière-plan (Masqué) -->
+    <canvas id="videoCanvas" width="1920" height="1080" style="display:none;"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
